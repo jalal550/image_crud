@@ -53,24 +53,18 @@
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-box-open"></i></div>
-                        Product
+                        Image
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{route('products.create')}}">Add Product</a>
 
-                        </nav>
-                        <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{route('products.index')}}">All Products List</a>
-
-                        </nav>
 
 
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{route('import.form')}}">import Products</a>
+                            <a class="nav-link"  href="{{route('images.index')}} }}">Image Add </a>
 
                         </nav>
+
                     </div>
 {{--                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">--}}
 {{--                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>--}}
@@ -111,19 +105,19 @@
 
 <script>
     // Set up CSRF token for AJAX requests
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        }
-    });
+    {{--$.ajaxSetup({--}}
+    {{--    headers: {--}}
+    {{--        'X-CSRF-TOKEN': '{{ csrf_token() }}'--}}
+    {{--    }--}}
+    {{--});--}}
 
     // Your other JavaScript code goes here
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="{{ asset('/') }}admin/js/scripts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-<script src="{{ asset('/') }}admin/assets/demo/chart-area-demo.js"></script>
-<script src="{{ asset('/') }}admin/assets/demo/chart-bar-demo.js"></script>
+{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>--}}
+{{--<script src="{{ asset('/') }}admin/assets/demo/chart-area-demo.js"></script>--}}
+{{--<script src="{{ asset('/') }}admin/assets/demo/chart-bar-demo.js"></script>--}}
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 {{--/<script src="{{ asset('/') }}admin/js/datatables-simple-demo.js"></script>--}}

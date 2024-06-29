@@ -16,4 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+
+
+
+
+
+
 });
+
+use App\Http\Controllers\ImageController;
+
+
+
+Route::post('/images', [ImageController::class, 'store']);
+Route::post('/images/{id}', [ImageController::class, 'update']);
+Route::DELETE('/images/{id}', [ImageController::class, 'destroy']);
+Route::post('/images-get/ajaxIndex', [ImageController::class, 'ajaxIndex']);
+

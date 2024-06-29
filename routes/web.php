@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
 
+use App\Http\Controllers\ImageController;
+
 use App\Http\Controllers\ProductPurchasedController;
 
 /*
@@ -18,6 +20,8 @@ use App\Http\Controllers\ProductPurchasedController;
 */
 
 Route::get('/home', [HomeController::class, 'index']);
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,7 +37,8 @@ Route::middleware('check.admin')->group(function () {
 
 
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    Route::post('/ajax', [ProductController::class, 'ajaxIndex'])->name('products.ajax');
+
+
     Route::get('/create-product',[ProductController::class,'create'] )->name('products.create');
 
    Route::post('product-store',[ProductController::class,'store'] )->name('products.store');
@@ -46,3 +51,8 @@ Route::middleware('check.admin')->group(function () {
 Route::post('/import-products', [ProductController::class, 'importProducts'])->name('import.product');
 Route::get('/export-products', [ProductController::class, 'exportProducts'])->name('export.products');
 Route::get('/import-form', [ProductController::class, 'import'])->name('import.form');
+
+
+Route::get('/images-index', [ImageController::class, 'index'])->name('images.index');
+
+

@@ -168,20 +168,6 @@ all images
             loadImages();
         });
     </script>
-    <script>
-        {{--if ($('#productTable').length > 0) {--}}
-        {{--    $('#productTable').DataTable({--}}
-        {{--        'processing': true,--}}
-        {{--        'order': [[0, 'desc']],--}}
-        {{--        'serverSide': true,--}}
-        {{--        'serverMethod': 'post',--}}
-        {{--        ajax: {--}}
-        {{--            url: "{{ route('images.get') }}"--}}
-        {{--        },--}}
-        {{--    });--}}
-        {{--}--}}
-
-
-    </script>
-    @endsection
+    
+   @endsection
 
